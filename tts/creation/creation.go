@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	tts_server_go "github.com/jing332/tts-server-go"
+	tts_server_go "github.com/gfyuye/tts-server-go"
 	"github.com/jing332/tts-server-go/tts"
 	"io"
 	"net/http"
