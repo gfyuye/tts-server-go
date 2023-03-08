@@ -71,21 +71,6 @@ jobs:
         with:
           name: ${{ matrix.goos }}_${{ matrix.goarch }}
           path: output/
-          
-  release:
-    needs: build
-    runs-on: ubuntu-latest
-    name: Download artifact and Release
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/download-artifact@v3
-        with:
-          path: artifacts
-
-      - name: upload
-        run: |
-          mkdir releases && cp ./artifacts/*/* ./releases
-          tree
-      
+  
+  
  
