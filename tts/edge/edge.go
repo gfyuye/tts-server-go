@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/gorilla/websocket"
-	tsg "github.com/jing332/tts-server-go"
+	tsg "github.com/gfyuye/tts-server-go"
 	log "github.com/sirupsen/logrus"
 	"math/rand"
 	"net"
