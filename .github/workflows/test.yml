@@ -67,7 +67,7 @@ jobs:
           
       
       - name: Upload artifact
-        uses: aactions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         if: ${{ !github.head_ref }}
         with:
           name: ${{ matrix.goos }}_${{ matrix.goarch }}
