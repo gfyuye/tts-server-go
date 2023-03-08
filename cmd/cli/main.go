@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	logformat "github.com/antonfisher/nested-logrus-formatter"
-	go get "github.com/gfyuye/tts-server-go/tree/master/server"
+	go get "github.com/gfyuye/tts-server-go/server"
 	log "github.com/sirupsen/logrus"
 	"net/http"
 	"os"
