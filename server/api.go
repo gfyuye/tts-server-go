@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	tts_server_go "github.com/jing332/tts-server-go"
+	tts_server_go "github.com/gfyuye/tts-server-go"
 	"io"
 	"io/fs"
 	"net/http"
@@ -16,9 +16,9 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/jing332/tts-server-go/tts/azure"
-	"github.com/jing332/tts-server-go/tts/creation"
-	"github.com/jing332/tts-server-go/tts/edge"
+	"github.com/gfyuye/tts-server-go/tts/azure"
+	"github.com/gfyuye/tts-server-go/tts/creation"
+	"github.com/gfyuye/tts-server-go/tts/edge"
 	log "github.com/sirupsen/logrus"
 )
 
