@@ -63,13 +63,29 @@ jobs:
           export CGO_ENABLED=$( [ "$GOOS" == "android" ] && echo 1 || echo 0 )
           cd cmd/cli
           go get github.com/gfyuye/tts-server-go/server
-          go build -o "$GITHUB_WORKSPACE/output/$BINARY_NAME" -trimpath -ldflags "$LD_FLAGS" .
-          
+          go build -o "$GITHUB_WORKSPACE/output/$BINARY_NAME" -trimpath -ldflags "$LD_FLAGS" .          
       
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         if: ${{ !github.head_ref }}
         with:
           name: ${{ matrix.goos }}_${{ matrix.goarch }}
-          path: ./artifact/
+          path: output/
+          
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    name: Download artifact and Release
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/upload-artifact@v3
+        with:
+          path: artifacts
+
+      - name: upload
+        run: |
+          mkdir releases && cp ./artifacts/*/* ./releases
+          tree
+      
  
