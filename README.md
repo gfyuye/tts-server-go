@@ -23,3 +23,5 @@ https://github.com/jing332/tts-server-android
 微软Azure接口(延迟高): `http://localhost:1233/api/azure`
 
 Edge大声朗读接口: `http://localhost:1233/api/ra`
+
+# 修改至jing332/tts-server-go
