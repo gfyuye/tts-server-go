@@ -64,10 +64,12 @@ jobs:
           cd cmd/cli
           go get github.com/gfyuye/tts-server-go/server
           go build -o "$GITHUB_WORKSPACE/output/$BINARY_NAME" -trimpath -ldflags "$LD_FLAGS" .
+          
+      
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: aactions/upload-artifact@v3
         if: ${{ !github.head_ref }}
         with:
           name: ${{ matrix.goos }}_${{ matrix.goarch }}
-          path: output/
+          path: ./artifact/
  
